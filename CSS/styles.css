@@ -169,7 +169,7 @@ button:hover {
 
 .front {
   background-color: white;
-  background-image: url(../Img/mandalaceleste.png);
+  background-image: url(../img/mandalaceleste.png);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -314,7 +314,7 @@ figure {
     justify-content: center;
     align-items: center;
     border: solid grey;
-    background-image: url(../Img/mandalabcoyn.png);
+    background-image: url(../img/mandalabcoyn.png);
   }
 
   .container-prod {
