@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  background-color: rgb(34, 33, 33);
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: grid;
+
+  grid-template-rows:
+    auto
+    1fr
+    auto;
+
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+header,
+nav,
+main,
+footer {
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: auto;
+  color: white;
+  border: solid grey;
+}
+
+header {
+  grid-area: header;
+  background: linear-gradient(90deg, #100f0f, rgb(172, 168, 168));
+  color: white;
+
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-style: oblique;
+  font-weight: 400;
+}
+.titulo2 {
+  font-size: 20px;
+  color: white;
+  text-shadow: rgb(48, 99, 107);
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+
+nav {
+  grid-area: nav;
+  background: linear-gradient(90deg, #100f0f, rgb(172, 168, 168));
+}
+main {
+  grid-area: main;
+  background: linear-gradient(90deg, #100f0f, rgb(172, 168, 168));
+}
+footer {
+  grid-area: footer;
+  background: linear-gradient(90deg, #100f0f, rgb(172, 168, 168));
+  width: 100%;
+  font-size: large;
+}
+
+.container-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: auto;
+}
+
+.container-nav__nos,
+.container-nav__prod,
+.container-nav__con {
+  color: white;
+  font-size: x-large;
+  line-height: 200px;
+  text-decoration: none;
+}
+
+.container-nav__nos:hover {
+  background-color: rgb(87, 164, 176);
+  border: solid grey;
+  padding: 1rem;
+}
+
+.container-nav__prod:hover {
+  background-color: rgb(87, 164, 176);
+  border: solid grey;
+  padding: 1rem;
+}
+
+.container-nav__con:hover {
+  background-color: rgb(87, 164, 176);
+  border: solid grey;
+  padding: 1rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 450px;
+  perspective: 600px;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+}
+.lefttext {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-left: 0rem;
+  margin-right: 0.5rem;
+}
+
+.button {
+  background-color: rgb(48, 99, 107);
+  color: white;
+  border-radius: 3px;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  border: solid grey;
+  font-size: larger;
+}
+
+button:hover {
+  background-color: rgb(87, 164, 176);
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.front {
+  background-color: white;
+  background-image: url(../Img/mandalaceleste.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.back {
+  background-color: #3a3a3a;
+  transform: rotateY(180deg) rotateZ(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+  text-align: center;
+  padding: 2px;
+}
+
+footer {
+  color: white;
+}
+
+.container-prod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8rem;
+  margin-right: 8rem;
+
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+}
+
+.card-prod {
+  width: 100%;
+  margin: 1rem;
+
+  border-radius: 10px;
+  background-color: #caef89;
+  border: solid green 3px;
+  color: black;
+  text-align: center;
+
+  overflow: hidden;
+
+  box-shadow: 0px 1px 10px 0px white;
+  cursor: default;
+  transition: all 400ms ease;
+  margin-bottom: 7rem;
+}
+
+.card-prod:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+
+figure {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+
+.card-prod img {
+  width: 100%;
+}
+
+.contenido {
+  margin-top: 0rem;
+  color: red;
+  font-weight: 400;
+}
+
+.button-cards {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+}
+
+.h2-p {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.container-footer {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  body {
+    grid-template-areas:
+      "nav header"
+      "nav main"
+      "nav footer";
+    grid-template-rows:
+      auto
+      1fr
+      auto;
+    grid-template-columns:
+      12rem
+      1fr;
+    background-color: black;
+    padding: 3rem;
+    grid-gap: 3rem;
+  }
+  header,
+  nav,
+  main,
+  footer {
+    background-color: black;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: solid grey;
+  }
+  header {
+    font-size: larger;
+  }
+  .container-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .lefttext {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-left: 3rem;
+    margin-right: 8rem;
+  }
+
+  .article {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: solid grey;
+    background-image: url(../Img/mandalabcoyn.png);
+  }
+
+  .container-prod {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+  }
+  .card-prod {
+    border-radius: 10px;
+    background-color: #a2e62e;
+    border: solid 3px green;
+    cursor: default;
+    transition: all 400ms ease;
+
+    width: 100%;
+    box-shadow: 0px 1px 10px 0px black;
+  }
+
+  .card-prod:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+  }
+
+  .card-prod img {
+    width: 100%;
+
+    margin-bottom: 2em;
+  }
+
+  .card-prod .contenido {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .button-cards {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .container-footer i {
+    color: white;
+  }
+}
